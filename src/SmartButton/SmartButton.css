@@ -3,3 +3,10 @@
   font-size: 1rem;
   padding: 1rem;
 }
+
+.halted {
+  background-color: yellow;
+}
+.ongoing {
+  background-color: blue;
+}

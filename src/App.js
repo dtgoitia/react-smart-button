@@ -1,14 +1,16 @@
 import React from 'react';
+import { Subject } from 'rxjs';
+
 import './App.css';
 import SmartButton from './SmartButton';
 
-import { timer } from 'rxjs';
 
 function App() {
-  const halt$ = timer(1000, 500);
+  const halt$ = new Subject();
   return (
     <div className="App">
       blah
+      <button onClick={() => halt$.next(null)}>STOP</button>
       <div className="smart-button-container">
         <SmartButton
           label="I'm a smart button!"
