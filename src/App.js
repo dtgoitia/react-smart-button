@@ -1,6 +1,8 @@
 import React from 'react';
 import { Subject } from 'rxjs';
 
+import Spinner from 'react-bootstrap/Spinner';
+
 import './App.css';
 import SmartButton from './SmartButton';
 
