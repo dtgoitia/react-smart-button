@@ -14,6 +14,7 @@ function App() {
       <div className="smart-button-container">
         <SmartButton
           label="I'm a smart button!"
+          loadingLabel='LOADING'
           action={() => console.log('action!')}
           halt$={halt$}
         />

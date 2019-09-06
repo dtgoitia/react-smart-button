@@ -30,10 +30,14 @@ class SmartButton extends React.Component {
     const currentClass = this.state.ongoingAction
       ? 'smart-button ongoing'
       : 'smart-button halted';
+    const label = this.state.ongoingAction
+      ? this.props.loadingLabel
+      : this.props.label;
     return (
       <button className={currentClass}
+        disabled={this.state.ongoingAction}
         onClick={this.action.bind(this)}>
-        { this.props.label }
+        { label }
       </button>
     );
   }
